@@ -8,15 +8,15 @@
 // E: if obj === function || obj === undefined, we're going to return an empty object literal
 
 var stringifyJSON = function(obj) {
-  console.log(obj);
+  // console.log(obj);
 
   if (typeof obj === 'string') {
-    console.log(obj + ' is a string');
+    // console.log(obj + ' is a string');
     return '"' + obj + '"';
   } else if (obj === null) {
     return 'null';
   } else if (typeof obj === 'object') { // [8],
-    console.log('obj is a collection');
+    // console.log('obj is a collection');
 
     if (Array.isArray(obj)) {
       var result = '[';
@@ -58,7 +58,7 @@ var stringifyJSON = function(obj) {
       return result;
     }
   } else {
-    console.log('obj is none of the above');
+    // console.log('obj is none of the above');
 
     return obj + '';
   }
